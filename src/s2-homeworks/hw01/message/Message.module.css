@@ -1,55 +1,31 @@
 .message {
-    padding: 7px 10px;
-    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03);
+
 }
 
 .imageAndText {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 20px;
+
 }
 
 .imageAndText img {
-    width: 48px;
-    height: 48px;
+
 }
 
 .text {
-    background-color: #0066CC;
-    max-width: 527px;
-    padding: 8px 16px 12px 8px;
-    border-radius: 12px;
 
 }
 
 .text:after {
-    content: 'It-incubator!';
-    color: #cc9c00;
+
 }
 
 .name {
-    margin-bottom: 4px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    color: #FFFFFF;
-    text-align: right;
 
 }
 
 .messageText {
-    white-space: pre-wrap;
-    overflow: auto;
 
 }
 
 .time {
-    text-align: right;
-    padding-right: 3px;
+
 }
