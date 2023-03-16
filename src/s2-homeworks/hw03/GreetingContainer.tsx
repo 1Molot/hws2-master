@@ -23,6 +23,7 @@ export const pureOnBlur = (name: string, setError: (error:string)=>void) => { //
     if (name.trim().length === 0) {
         setError('error')
     }
+
 }
 
 export const pureOnEnter = (e: KeyboardEvent, addUser:()=>void) => {
