@@ -15,7 +15,12 @@ export function restoreState<T>(key: string, defaultState: T) {
 
 // ---------------------------------------------------------------------------------------------------------------
 // пример использования:
-/*
+/*   useEffect(()=>{      //загрузиться после отрисовки
+      const a = localStorage.getItem('counterItem')  //получаем значение по ключу 'counterItem'
+        const b = a ? JSON.parse(a) : {}    //true / false
+        setMinValue(b.min || 0)       //текущие значения в input
+        setMaxValue(b.max || 0)
+    },[])
 type StateType = {
     x: string
     y: number
