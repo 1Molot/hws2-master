@@ -40,8 +40,8 @@ function Clock() {
     const stringDate = date.toLocaleDateString('ru-Ru') || <br/> // день.месяц.год (01.02.2022) // пишут студенты, варианты 01.02.0123/01.02.-123/01.02.12345 не рассматриваем
 
     // день недели на английском, месяц на английском (https://learn.javascript.ru/intl#intl-datetimeformat)
-    const stringDay = date.toLocaleDateString("en-US") || <br/> // пишут студенты date
-    const stringMonth = date.toLocaleDateString("en-US") || <br/> // пишут студенты month
+    const stringDay = date.toLocaleDateString("numeric") || <br/> // пишут студенты date
+    const stringMonth = date.toLocaleDateString("long") || <br/> // пишут студенты month
 
     return (
         <div className={s.clock}>
