@@ -42,6 +42,8 @@ const HW13 = () => {
 
             })
             .catch((e) => {
+                setText(e.response.data.errorText || e.message )
+                setInfo(e.response.data.info || e.name)
                 if (e.response.status === 500) {
                     setCode('Код 500!')
                     setImage(error500);
