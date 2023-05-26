@@ -21,6 +21,7 @@ const HW13 = () => {
     const [image, setImage] = useState('')
 
     const send = (x?: boolean | null) => () => {
+        debugger
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
@@ -36,14 +37,14 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo(res.data.info)
-                setText(res.data.errorText)
+                setInfo(res.data?.info)
+                setText(res.data?.errorText)
                 // дописать
 
             })
             .catch((e) => {
-                setText(e.response.data.errorText || e.message )
-                setInfo(e.response.data.info || e.name)
+                setText(e.response.data?.errorText || e.message )
+                setInfo(e.response.data?.info || e.name)
                 if (e.response.status === 500) {
                     setCode('Код 500!')
                     setImage(error500);
