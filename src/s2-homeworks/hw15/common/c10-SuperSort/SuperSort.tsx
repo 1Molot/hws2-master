@@ -1,4 +1,5 @@
 import React from 'react'
+import store from "../../../hw10/bll/store";
 
 // добавить в проект иконки и импортировать
 const downIcon = '[\\/]'
@@ -14,7 +15,12 @@ export type SuperSortPropsType = {
 
 export const pureChange = (sort: string, down: string, up: string) => {
     // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    return sort === down
+                ? up
+                : sort === up
+                    ? ''
+                    : down
+    //логика сортировки 1)стрелка вверх => 2)стрелка вниз=> 3) никакой сортировки=>1)
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
@@ -26,6 +32,7 @@ const SuperSort: React.FC<SuperSortPropsType> = (
     const down = '1' + value
 
     const onChangeCallback = () => {
+
         onChange(pureChange(sort, down, up))
     }
 
@@ -40,13 +47,13 @@ const SuperSort: React.FC<SuperSortPropsType> = (
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
         >
-            {/*сделать иконку*/}
-            {/*<img*/}
-            {/*    id={id + '-icon-' + sort}*/}
-            {/*    src={icon}*/}
-            {/*/>*/}
+            сделать иконку
+            <img
+                id={id + '-icon-' + sort}
+                src={icon}
+            />
 
-            {icon} {/*а это убрать*/}
+            {/*{icon} /!*а это убрать*!/*/}
         </span>
     )
 }
